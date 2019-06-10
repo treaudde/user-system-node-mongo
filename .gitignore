@@ -1,0 +1,5 @@
+/node_modules/
+/public/bower_components/
+/pm2-config.json
+/nbproject/private/
+/.env

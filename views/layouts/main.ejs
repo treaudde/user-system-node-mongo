@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head %>
+  </head>
+
+  <body>
+      
+      <% include ../partials/header %>
+      <% include ../partials/nav %>
+    <div class="container">
+        
+       <div class="row">
+           <div class="col-md-12">
+               <% if(messages.success.length > 0){ %>
+               <div class="alert alert-success">
+                   <% for(var x=0; x<messages.success.length; x++){ %>
+                        <%-messages.success[x]%><br />
+                   <% } %>
+               </div>
+               <% } %>
+               
+               <% if(messages.error.length > 0){ %>
+               <div class="alert alert-danger">
+                   <% for(var x=0; x<messages.error.length; x++){ %>
+                        <%-messages.error[x]%><br />
+                   <% } %>
+               </div>
+               <% } %>
+           </div>
+       </div>
+     <%- body %>
+
+    </div> <!-- /container -->
+    
+    <% include ../partials/footer %>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<h2><%=title%></h2>
+<h3>
+    Welcome <%-user.email%>
+</h3>
+
+<p>Choose from the following options to continue.</p>
+
+<ul>
+    <li>
+        <a href="/users/update-profile">Update Profile</a>
+    </li>
+    <li>
+        <a href="#" onclick="if(confirm('Are you sure? This action cannot be undone.')){document.getElementById('delete-account').submit();}">Delete Account</a>
+    </li>
+    
+    <% if(user.is_admin){ %>
+    <li>
+        <a href="/admin/dashboard">Admin Dashboard</a>
+    </li>
+    <% } %>
+</ul>
+
+<form name="delete-account" id="delete-account" action="/users/delete-account?_method=DELETE" method="post"></form>

@@ -1,0 +1,110 @@
+<div class="row">
+
+    <div class="col-md-12">
+         <div class="col-md-12">
+            <h2><%=title%> - <%-single_user.email%></h2>
+        </div>
+        
+        <p>Select an option to continue.</p>
+        
+        <p><a href="/admin/update-user/<%-single_user.id%>">Update User</a>
+            <br />
+            <a href="/admin/list-users">View All Users</a>
+        </p>
+        
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <td>
+                        <strong>First Name:</strong>
+                    </td>
+                    <td>
+                        <%-single_user.first_name%>
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <td>
+                        <strong>Last Name:</strong>
+                    </td>
+                    <td>
+                        <%-single_user.last_name%>
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <td>
+                        <strong>Email:</strong>
+                    </td>
+                    <td>
+                        <%-single_user.email%>
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <td>
+                        <strong>Date Created:</strong>
+                    </td>
+                    <td>
+                        <%-single_user.date_added.toString()%>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <strong>Date Last Modified:</strong>
+                    </td>
+                    <td>
+                        <%-single_user.date_modified.toString()%>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <strong>Date Last Login:</strong>
+                    </td>
+                    <td>
+                        <%if(single_user.date_last_login !== null){ %>
+                            <%-single_user.date_last_login.toString()%>
+                        <% } else { %>
+                            NEVER
+                        <% } %>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <strong>Is Admin:</strong>
+                    </td>
+                    <td>
+                        <%if(single_user.is_admin){ %>
+                            YES
+                        <% } else { %>
+                            NO
+                        <% } %>
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <strong>Status:</strong>
+                    </td>
+                    <td>
+                        <%if(single_user.status === statuses.active){ %>
+                            ACTIVE
+                        <% } else if(single_user.status === statuses.disabled) { %>
+                            DISABLED
+                        <% } %>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        
+    </div>
+
+</div>
+

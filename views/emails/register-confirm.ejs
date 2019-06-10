@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Welcome to the User System</h1>
+        
+        <p>
+            <strong>Your Username:</strong> <%-username%>
+            
+            <% if(typeof password !== "undefined"){ %>
+            <br />
+            <strong>Your Password:</strong> <%-password%>
+            <% } %>
+        </p>
+        
+        <p>
+            <a href="<%-confirmationLink%>">Click here to verify your account and log in</a>
+        </p>
+        
+        <p>
+            If the link above doesnt work, cut and paste the following link into your browser:<br />
+            <%-confirmationLink%>
+        </p>
+        
+    </body>
+
+</html>

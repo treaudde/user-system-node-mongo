@@ -1,0 +1,53 @@
+
+<div class="row">
+   
+
+    <div class="col-md-6 col-md-offset-3">
+         <div class="col-md-12">
+            <h2><%=title%></h2>
+        </div>
+        
+        <p>Update your profile below.</p>
+
+        <form name="register-form" id="register-form" method="post" action="/users/update-profile?_method=PUT">
+            <div class="form-group">
+                <label for="first_name">First Name:</label>
+                <input class="form-control" type="text" name="first_name" 
+                       id="first_name" placeholder="Enter first name"  
+                       <%if(typeof user.first_name !== "undefined"){%>value="<%-user.first_name%>"<%}%>
+                       />
+            </div>
+            
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input class="form-control" type="text" name="last_name" 
+                       id="last_name" placeholder="Enter last name"  
+                       <%if(typeof user.last_name !== "undefined"){%>value="<%-user.last_name%>"<%}%>
+                       />
+            </div>
+            
+            <div class="form-group">
+                <label for="email_address">Email Address:</label>
+                <input class="form-control" type="email" name="email" 
+                       id="email" placeholder="Enter email address"  
+                       <%if(typeof user.email !== "undefined"){%>value="<%-user.email%>"<%}%>
+                       />
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input class="form-control" type="password" name="password" id="password" placeholder="Enter password" />
+            </div>
+            
+             <div class="form-group">
+                <label for="confirm_password">Confirm Password:</label>
+                <input class="form-control" type="password" name="confirm_password" id="confirm_password" placeholder="Re-enter password" />
+            </div>
+            
+            <button type="submit" class="btn btn-default">Update Profile</button>
+            <a href="/users/dashboard">Cancel</a>
+        </form>
+    </div>
+
+</div>
+
