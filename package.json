@@ -20,7 +20,7 @@
     "express-session": "^1.11.1",
     "jwt-simple": "^0.3.0",
     "method-override": "^2.3.2",
-    "mongoose": "^4.0.1",
+    "mongoose": "^5.7.7",
     "morgan": "^1.5.1",
     "sendgrid": "^1.6.1",
     "serve-favicon": "^2.2.0"
